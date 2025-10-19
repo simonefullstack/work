@@ -12,10 +12,15 @@ num_guess = 3
 for i in range(num_guess):
     guess = int(input("What is your guess?"))
 
+    #make sure number is between 0 and 10
+    if (guess < 0 or guess > 10):
+        print("Guess is invalid. Guess again.")
+
+
     # if random number is guessed, break loop and let person know
     if random_num == guess:
         print("Congratulations!! You guessed the number.")
         break
 
-#gives random number
+#let user know random number
 print("The random number is ", + random_num)
